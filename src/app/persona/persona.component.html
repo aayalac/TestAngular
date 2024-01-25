@@ -1,0 +1,17 @@
+<h3>Hola {{Nombre}}, bienvenido/a a la pagina</h3>
+<p>Aqui tienes una lista con tus datos:</p>
+
+Nombre de la persona: {{Nombre}}
+<br>
+Apellido de la persona: {{Apellido}}
+<br>
+Area: {{Area}}
+<br>
+Introduce el nombre de la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitarCuadro">
+<br>
+{{textoDeRegistro}}
+<br>
+Registrado: <input type="radio" value="si" name="nRegistro" [checked]="usuRegistrado"(click)="setUsuarioRegistrado($event)">
+<br>
+No registrado: <input type="radio" value="no" name="nRegistro" (click)="setUsuarioRegistrado($event)">
+{{getRegistroUsuario()}}
